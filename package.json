@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "parcel src/index.html --global script",
-    "build": "parcel build src/index.html src/index1.html --global script --public-url https://spectator-static-assets.s3.amazonaws.com/marching-band --no-content-hash",
+    "build": "parcel build src/index.html --global script --public-url https://spectator-static-assets.s3.amazonaws.com/marching-band-dissolve --no-content-hash",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "patch-package"
   },
