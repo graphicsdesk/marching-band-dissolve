@@ -1,14 +1,13 @@
-<pageConfig>{{ pageNum = 0 }}</pageConfig>
+<pageConfig>{{ pageNum = 1 }}</pageConfig>
 <html>
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ pageNum === 0 ? headline : pages['page_' + pageNum + '_title'] }}</title>
+  <title>{{ pageNum === 1 ? headline : pages['page_' + pageNum + '_title'] }}</title>
   <link rel="stylesheet" href="./styles.scss">
-  <link rel="shortcut icon" href="https://www.columbiaspectator.com/pb/resources/img/CDS_Favicon.ico"
-    type="image/x-icon" />
+  <link rel="shortcut icon" href="https://www.columbiaspectator.com/pb/resources/img/CDS_Favicon.ico" type="image/x-icon"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,500&display=swap" rel="stylesheet">
 </head>
 
@@ -18,7 +17,12 @@
 
     <include src="partials/navbar.html"></include>
 
-    <include src="partials/header-cover.html"></include>
+    <if condition="USE_COVER_HED">    
+      <include src="partials/header-cover.html"></include>
+    </if>
+    <else>
+      <include src="partials/header.html"></include>
+    </else>
 
     <div class="story">
       <each loop="item in body['page_' + pageNum]">
@@ -39,7 +43,7 @@
         </switch>
       </each>
     </div>
-
+    
     <include src="partials/footer.html"></include>
 
     <script src="./script.js"></script>

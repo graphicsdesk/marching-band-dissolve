@@ -2,3 +2,39 @@
 
 // Uncomment the following line before publishing a News story
 // @import "styles/news-ellipsis";
+#body-page-container:not(.body-page-0) {
+    .cover-hed header {
+        max-width: 620px;
+    }
+}
+
+#body-page-container.body-page-0 {
+    .cover-hed header {
+        transform: translateY(-130%);
+    }
+}
+
+#body-page-container.body-page-1 {
+    .cover>img {
+        object-position: 90% 0;
+    }
+}
+
+#body-page-container.body-page-1 {
+    #navbar.only-logo .nav-link {
+
+        &.nav-link-highlighted,
+        &:hover {
+            border-bottom: 3px solid #121212;
+        }
+
+        a {
+            color: #121212;
+        }
+    }
+}
+@media (max-width: 760px) {
+    .portrait-container img {
+      object-fit: contain;
+    }
+  }

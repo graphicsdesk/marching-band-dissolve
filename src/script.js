@@ -39,3 +39,8 @@ export function hamburgerTrigger() {
 if (window.innerWidth <= 460) {
   textBalancer.balanceText('#headline, .deck, .image-caption-text');
 }
+
+/* Highlight nav link */
+
+const pageNum = parseInt(document.getElementById('body-page-container').getAttribute('data-page-num'));
+document.getElementById('nav-link-' + pageNum).classList.add('nav-link-highlighted');
