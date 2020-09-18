@@ -3,14 +3,17 @@
 // Uncomment the following line before publishing a News story
 @import "styles/news-ellipsis";
 
-#body-page-container.body-page-0,
-#body-page-container.body-page-1 {
+#body-page-container.body-page-0 {
     .cover-hed header {
         transform: translateY(-180%);
     }
 }
+   
 
 #body-page-container.body-page-1 {
+    .cover-hed header {
+        transform: translateY(-120%);
+    }
     .cover>img {
         object-position: 90% 0;
     }
